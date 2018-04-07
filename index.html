@@ -39,13 +39,147 @@
 		<div class="song-nav">
 			<!--歌单导航-->
 			<a class="nav-f" href="../song_n/index.html" title="梦梦的翻车歌单" target="_blank">蛊梦の歌单</a>
-			<a class="nav-f" href="../song_s/index.html" title="七裳的女神歌单" target="_blank">七裳の歌单</a>
+			<a class="nav-f nav-c" href="../song_s/index.html" title="七裳的女神歌单" target="_blank">七裳の歌单</a>
 		</div>
 	</div>
 
-	<div class="main">
-        <div class="left">left</div>
-        <div class="right">right</div>
+	<div class="main word-middle">
+        <div class="left">
+            <div id="wrap">
+                <a v-for="(list,index) in navLists" class="nav" :class="{ act:changeAct == index}" @click="acts(index)">{{list.text}}</a>
+                <div  v-show="changeAct === 0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="geming">歌名</th>
+                                <th class="yuanch">原唱</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>月光</td>
+                                <td>初音クミ</td>
+                            </tr>
+                            <tr>
+                                <td>病名为爱</td>
+                                <td>镜音双子</td>
+                            </tr>
+                            <tr>
+                                <td>桃源恋歌</td>
+                                <td>GARNiDELiA</td>
+                            </tr>
+                            <tr>
+                                <td>打上花火</td>
+                                <td>DAOKO、米津玄师</td>
+                            </tr>
+                            <tr>
+                                <td>Start:Dash!!</td>
+                                <td>u's</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div  v-show="changeAct === 1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="geming">歌名</th>
+                                <th class="yuanch">原唱</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>涉川</td>
+                                <td>不才</td>
+                                <td>古风</td>
+                            </tr>
+                            <tr>
+                                <td>离人愁</td>
+                                <td>李袁杰</td>
+                                <td>古风</td>
+                            </tr>
+                            <tr>
+                                <td>红昭愿</td>
+                                <td>音阙诗听</td>
+                                <td>古风</td>
+                            </tr>
+                            <tr>
+                                <td>白石溪</td>
+                                <td>洛天依、乐正绫</td>
+                                <td>古风</td>
+                            </tr>
+                            <tr>
+                                <td>体面</td>
+                                <td>于文文</td>
+                                <td>流行</td>
+                            </tr>
+                            <tr>
+                                <td>爱笑的眼睛</td>
+                                <td>林俊杰</td>
+                                <td>流行</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="wrap1">
+                <a v-for="(list,index) in navLists" class="nav" :class="{ act:changeAct1 == index}" @click="acts(index)">{{list.text}}</a>
+                <div  v-show="changeAct1 === 0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="geming">歌名</th>
+                                <th class="yuanch">原唱</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div  v-show="changeAct1 === 1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="geming">歌名</th>
+                                <th class="yuanch">原唱</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="bg-f2"  style="background-image: url(../../images/button-p.jpg);">
+        </div>
     </div>
     <script src="../../build/chen/index.min.js"></script>
 </body>
